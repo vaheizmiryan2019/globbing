@@ -20,6 +20,8 @@ public class GlobbingGetAddressAndBuyForMeServiceTest extends GlobbingBaseTest {
 	// 2.3 Paste a true link in text box
 	// 2.5 Then press on button Buy for me BASIC FlOW
 
+	
+	// 17
 	@Test(dependsOnMethods = { "buyForMeService1" })
 	public void buyForMeService() {
 		GetAddressAndBuyForMePage buyForMe = new GetAddressAndBuyForMePage(driver);
@@ -28,6 +30,8 @@ public class GlobbingGetAddressAndBuyForMeServiceTest extends GlobbingBaseTest {
 		Assert.assertTrue(GetAddressAndBuyForMePage.plusAtLinkBoxIsDisplayedXpath());
 	}
 
+	
+	// 18
 	@Test
 	public void buyForMeService1() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);

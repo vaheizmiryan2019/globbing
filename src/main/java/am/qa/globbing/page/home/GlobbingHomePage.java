@@ -91,4 +91,31 @@ public class GlobbingHomePage extends PageObject {
 	}
 	
 	// ------------------------------------------------------------------------------------------------------------------	
+
+	@FindBy(xpath = "//a[@class='user--name f_userName']")
+	WebElement myNameInMyProfilePage;
+	
+	public PageObject clickOnName() {
+		myNameInMyProfilePage.click();
+		return new LoginPage(driver);
+	}
+	
+	// ------------------------------------------------------------------------------------------------------------------
+	
+	@FindBy(xpath = "//span[@class='f_closeUpdateDocs popup-close-btn']")
+	WebElement someShit;
+
+	public PageObject closeFillMenu() {
+		someShit.click();
+		return new LoginPage(driver);
+	}
+
+
+
+
+
+
+
+
+
 }

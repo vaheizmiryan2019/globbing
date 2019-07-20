@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="P0 Tests" verbose="1">
+	<test name="login,register,language">
+		<classes>
+			<class name="am.qa.globbing.test.login.GlobbingLoginTest">
+				<methods>
+					<include name="testLoginWithIncorrectCredentials" />
+					<include name="testLoginWithIncorrectCredentials1" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

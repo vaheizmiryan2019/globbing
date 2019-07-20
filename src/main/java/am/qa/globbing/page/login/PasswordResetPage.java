@@ -3,7 +3,6 @@ package am.qa.globbing.page.login;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import am.qa.globbing.page.base.PageObject;
 import am.qa.globbing.util.DriverUtil;
 
@@ -37,8 +36,7 @@ public class PasswordResetPage extends PageObject{
 		return new PageObject(driver);
 	}
 	
-	
-	
+
 	public boolean forgotPasswordRequestSuccessAssert () {
 		try {
 			DriverUtil.waitForElementPresent(driver, 5, passwordResetSuccess);

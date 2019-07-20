@@ -8,7 +8,9 @@ import am.qa.globbing.test.base.GlobbingBaseTest;
 
 public class GlobbingRegistrationTest extends GlobbingBaseTest {
 
-	@Test(dependsOnMethods = { "testRegWithIncorrectCredentials" })
+	// 5
+	// reg with True Email, True Password, True Re-Enter password, True Tel., active chekbox
+	@Test
 	public void testRegWithCorrectCredentials() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnLogo();
@@ -16,7 +18,9 @@ public class GlobbingRegistrationTest extends GlobbingBaseTest {
 		register.registerUser("user@gmail.com", "useruser", "useruser", "9876543");
 	}
 
-	@Test(dependsOnMethods = { "testRegWithIncorrectCredentials1" })
+	// 6
+	// reg with False Email, True Password, True Re-Enter password, True Tel., active chekbox
+	@Test
 	public void testRegWithIncorrectCredentials() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnLogo();
@@ -24,8 +28,10 @@ public class GlobbingRegistrationTest extends GlobbingBaseTest {
 		register.registerUser("sxal", "vaheizmiryan", "vaheizmiryan", "9876543");
 		Assert.assertTrue(RegisterPage.isRegErrorMsgPresent());
 	}
-
-	@Test(dependsOnMethods = { "testRegWithIncorrectCredentials2" })
+	
+	// 7
+	// reg with True Email, False Password, True Re-Enter password, True Tel., active chekbox
+	@Test
 	public void testRegWithIncorrectCredentials1() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnLogo();
@@ -34,7 +40,9 @@ public class GlobbingRegistrationTest extends GlobbingBaseTest {
 		Assert.assertTrue(RegisterPage.isRegErrorMsgPresent1());
 	}
 
-	@Test(dependsOnMethods = { "testRegWithIncorrectCredentials3" })
+	// 8
+	// reg with True Email, True Password, False Re-Enter password, True Tel., active chekbox
+	@Test
 	public void testRegWithIncorrectCredentials2() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnLogo();
@@ -43,7 +51,9 @@ public class GlobbingRegistrationTest extends GlobbingBaseTest {
 		Assert.assertTrue(RegisterPage.isRegErrorMsgPresent2());
 	}
 
-	@Test(dependsOnMethods = { "testRegWithIncorrectCredentials4" })
+	// 9
+	// reg with True Email, True Password, True Re-Enter password, False Tel., active chekbox
+	@Test
 	public void testRegWithIncorrectCredentials3() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnLogo();
@@ -53,7 +63,9 @@ public class GlobbingRegistrationTest extends GlobbingBaseTest {
 		Assert.assertTrue(RegisterPage.isRegErrorMsgPresent3()/*||RegisterPage.isRegErrorMsgPresent5()*/);
 	}
 
-	@Test(dependsOnMethods = { "testRegWithIncorrectCredentials5" })
+	// 10
+	// reg with True Email, True Password True Re-Enter password, True Tel., deactive chekbox
+	@Test
 	public void testRegWithIncorrectCredentials4() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnLogo();
@@ -62,7 +74,9 @@ public class GlobbingRegistrationTest extends GlobbingBaseTest {
 		Assert.assertTrue(RegisterPage.isRegErrorMsgPresent4());
 	}
 	
-	@Test(dependsOnMethods = { "testRegWithIncorrectCredentials6" })
+	// 11
+	// reg with False Email, False Password, True Re-Enter password, True Tel., active chekbox
+	@Test
 	public void testRegWithIncorrectCredentials5() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnLogo();
@@ -71,7 +85,10 @@ public class GlobbingRegistrationTest extends GlobbingBaseTest {
 		Assert.assertTrue(RegisterPage.isRegErrorMsgPresent());
 		Assert.assertTrue(RegisterPage.isRegErrorMsgPresent1());
 	}
-	@Test(dependsOnMethods = { "testRegWithIncorrectCredentials7" })
+	
+	// 12
+	// reg with False Email, False Password, False Re-Enter password, True Tel., active chekbox
+	@Test
 	public void testRegWithIncorrectCredentials6() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnLogo();
@@ -82,7 +99,9 @@ public class GlobbingRegistrationTest extends GlobbingBaseTest {
 		Assert.assertTrue(RegisterPage.isRegErrorMsgPresent2());
 	}
 	
-	@Test(dependsOnMethods = { "testRegWithIncorrectCredentials8" })
+	// 13
+	// reg with False Email, False Password, False Re-Enter password, False Tel., active chekbox
+	@Test
 	public void testRegWithIncorrectCredentials7() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnLogo();
@@ -95,7 +114,8 @@ public class GlobbingRegistrationTest extends GlobbingBaseTest {
 
 	}
 	
-//	@Test(dependsOnMethods = { "testRegWithIncorrectCredentials9" })
+	// 14
+	// reg with False Email, False Password, False Re-Enter password, False Tel., deactive chekbox
 	@Test
 	public void testRegWithIncorrectCredentials8() {
 	GlobbingHomePage home = new GlobbingHomePage(driver);

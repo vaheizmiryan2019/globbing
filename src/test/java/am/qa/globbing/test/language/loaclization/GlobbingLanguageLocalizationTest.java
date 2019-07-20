@@ -7,6 +7,7 @@ import am.qa.globbing.test.base.GlobbingBaseTest;
 
 public class GlobbingLanguageLocalizationTest extends GlobbingBaseTest {
 	
+	//Default langugage is Armenian
 	//Open Globbing 
 	//1.From arm to eng
 	//2.From eng to rus
@@ -16,7 +17,8 @@ public class GlobbingLanguageLocalizationTest extends GlobbingBaseTest {
 	//6.From eng to arm
 
 	
-	@Test
+	// 62
+	@Test 
 	public void armToEng() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnDropdown();	
@@ -24,22 +26,31 @@ public class GlobbingLanguageLocalizationTest extends GlobbingBaseTest {
 		firstClick.clickOnFirst();
 	}
 	
+	// 61
 	@Test
-	public void engoToRus() {
+	public void engToRus() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnDropdown();
+		LanguageLocalization firstClick = new LanguageLocalization(driver);
+		firstClick.clickOnFirst();
+		home.clickOnDropdown();	
 		LanguageLocalization secondClick = new LanguageLocalization(driver);
 		secondClick.clickOnSecond();
 	}
 	
+	// 65
 	@Test
 	public void rusToArm() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
+		home.clickOnDropdown();
+		LanguageLocalization secondClick = new LanguageLocalization(driver);
+		secondClick.clickOnSecond();
 		home.clickOnDropdown();
 		LanguageLocalization thirdClick = new LanguageLocalization(driver);
 		thirdClick.clickOnThird();
 	}
 	
+	// 63
 	@Test
 	public void armToRus() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
@@ -47,18 +58,26 @@ public class GlobbingLanguageLocalizationTest extends GlobbingBaseTest {
 		LanguageLocalization fourthClick = new LanguageLocalization(driver);
 		fourthClick.clickOnSecond();
 	}
-	
+	 
+	// 64
 	@Test
 	public void rusToEng() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnDropdown();
+		LanguageLocalization fourthClick = new LanguageLocalization(driver);
+		fourthClick.clickOnSecond();
+		home.clickOnDropdown(); 
 		LanguageLocalization fifthClick = new LanguageLocalization(driver);
 		fifthClick.clickOnFirst();
 	}
 	
+	// 60
 	@Test
 	public void engToArm() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
+		home.clickOnDropdown();
+		LanguageLocalization fifthClick = new LanguageLocalization(driver);
+		fifthClick.clickOnFirst();
 		home.clickOnDropdown();
 		LanguageLocalization sixthClick = new LanguageLocalization(driver);
 		sixthClick.clickOnThird();

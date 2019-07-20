@@ -11,6 +11,7 @@ public class GlobbingLoginWithFbTest extends GlobbingBaseTest {
 	//Open Globbing
 	//Login with fb
 	
+	// 1
 	@Test
 	public void loginWithFb() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);

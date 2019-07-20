@@ -11,20 +11,11 @@ public class GlobbingLoginTest extends GlobbingBaseTest {
 
 	// Open Globbing.com
 	// 1.Press on LogIn Button
-	//First Variant
 	// 2.Fill the true email in first text box
 	// 3.Fill the false password in second text box
 	// 4.Click on the button Log In
-	//Second Variant
-	// 5.Fill the false email in first text box
-	// 6.Fill the true password in second text box
-	// 7.Click on the button Log In
-	//Third Variant
-	// 8.Fill the true email in first text box
-	// 9.Fill the true password in the second text box
-	// 10.Click on the button Log In
-
-	@Test(dependsOnMethods = { "testLoginWithIncorrectCredentials" })
+	// 2
+	@Test
 	public void testLoginWithCorrectCredentials() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnLogo();
@@ -33,7 +24,13 @@ public class GlobbingLoginTest extends GlobbingBaseTest {
 		
 	}
 
-	@Test(dependsOnMethods = { "testLoginWithIncorrectCredentials1" })
+	// 4
+	// Open Globbing.com
+	// 1.Press on LogIn Button
+	// 2.Fill the false email in first text box
+	// 3.Fill the true password in second text box
+	// 4.Click on the button Log In
+	@Test
 	public void testLoginWithIncorrectCredentials() throws InterruptedException {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
 		home.clickOnLogo();
@@ -43,6 +40,12 @@ public class GlobbingLoginTest extends GlobbingBaseTest {
 		
 	}
 	
+	// 3
+	// Open Globbing.com
+	// 1.Press on LogIn Button
+	// 2.Fill the true email in first text box
+	// 3.Fill the true password in the second text box
+	// 4.Click on the button Log In
 	@Test
 	public void testLoginWithIncorrectCredentials1() throws InterruptedException {
 		GlobbingHomePage home = new GlobbingHomePage(driver);

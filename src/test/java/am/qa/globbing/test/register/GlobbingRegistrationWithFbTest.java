@@ -11,6 +11,7 @@ public class GlobbingRegistrationWithFbTest extends GlobbingBaseTest {
 	//Open Globbing
 	//Register with fb
 	
+	// 15
 	@Test
 	public void regWithFbAcc() {
 		GlobbingHomePage home = new GlobbingHomePage(driver);
