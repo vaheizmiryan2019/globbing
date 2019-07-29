@@ -2,7 +2,7 @@
 <suite name="My First Suite" verbose="1" >
   <test name="First Test Example" >
     <classes>
-      <class name="am.qa.globbing.test.login.GlobbingLoginTest"/>
+      <class name="am.qa.globbing.test.my.profile.GlobbingBalanceTest"/>
     </classes>
  </test>
 </suite>
